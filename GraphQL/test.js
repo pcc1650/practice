@@ -2,7 +2,7 @@
 {
 	user (id: 1001) {
 		name,
-		photo
+		avatar	
 	}
 }
 
@@ -34,7 +34,7 @@
 
 // strong-typing 
 // scalar type includes Int, Float, String, Boolean, ID
-// object type 
+// advanced: Object, Interface, Union, Enum, Input Object, List, Non-Null
 type Query {
 	user: User
 }
@@ -64,3 +64,59 @@ type Address {
 		}
 	}
 }	
+
+
+// Mutation
+// comma or not ?
+mutation {
+	create_client (name: "tonyzhao", dob: "xx/xx/xxxx")
+	{
+		id
+		name
+		dob
+	}
+}
+
+
+// fragment
+{
+	user {
+		name
+		friends {
+			name
+			events {
+				name
+			}
+		}
+	}
+}
+
+{
+	user {
+		name
+		friends {
+			...friendFragment
+		}
+	}
+}
+
+fragment friendFragment on User {
+	name
+	events {
+		name
+	}
+}
+
+
+// parameter
+query getMyPost($id: String) {
+	post(id: $id) {
+		title,
+		body,
+		author {
+			name
+			avatarUrl
+			profileUrl
+		}
+	}
+}
