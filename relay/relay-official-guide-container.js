@@ -1,3 +1,5 @@
+// Relay.Container lets components declare fragments.
+
 import React from 'react'
 class ProfilePicture extends React.Component {
     render() {
