@@ -41,6 +41,7 @@ class LikeStoryMutation extends Relay.Mutation {
 class LikeButton extends React.Component {
     _handleLike = () => {
         // this.props.relay.commitUpdate 
+        // The commitUpdate method is analogous to dispatching an action in Flux.
         this.props.relay.commitUpdate(
             new LikeStoryMutation({story: this.props.story})
         )
