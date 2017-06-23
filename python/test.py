@@ -17,7 +17,7 @@ print f(42) # 44
 # [18, 9, 24, 12, 27]
 filter(lambda x: x % 3 == 0, foo)
 # [14, 46, 28, 54, 44, 58, 26, 34, 64]
-map(lambda: x: x * 2 + 10, foo)
+map(lambda x: x * 2 + 10, foo)
 # 139
 reduce(lambda x, y: x + y, foo)
 # do the same with sum(foo)
