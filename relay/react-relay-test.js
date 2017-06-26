@@ -1,5 +1,15 @@
 // Relay todo list example
 class Todo extends React.Component {
+    // this.props.relay.pendingVariables
+    // pendingVariables contains the set of variables that are being used to fetch the new
+    // props, i.e. when this.props.relay.setVariables() or this.props.relay.forceFetch()
+    // are called and the corresponding request is in flight.
+    // If no request is in flight pendingVariables is null.
+    if(pendingVariables){
+        return (
+            <div>Loading</div>
+        )
+    }
 	render() {
 		return (
 			<div>{this.props.todo.id} {this.props.todo.text}</div>
