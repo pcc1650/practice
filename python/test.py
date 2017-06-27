@@ -25,3 +25,10 @@ reduce(lambda x, y: x + y, foo)
 
 
 # list.split()
+
+
+# String.replace
+str = "this is string example....wow!!! this is really string"
+print str.replace("is", "was") # thwas was string example....wow!!! thwas was really string
+print str.replace("is", "was", 3) # thwas was string example....wow!!! thwas is really string
+# str is still the origin string
