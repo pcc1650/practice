@@ -32,3 +32,9 @@ str = "this is string example....wow!!! this is really string"
 print str.replace("is", "was") # thwas was string example....wow!!! thwas was really string
 print str.replace("is", "was", 3) # thwas was string example....wow!!! thwas is really string
 # str is still the origin string
+
+# initialize list
+# the first one creates copies of the lists, not new lists for column or row.
+# the second one is list comprehension
+counts1 = [[0 for _ in range(7)] for _ in range(3)]
+counts2 = [[0] * 7 ] * 3 
