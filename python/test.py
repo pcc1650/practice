@@ -38,3 +38,16 @@ print str.replace("is", "was", 3) # thwas was string example....wow!!! thwas is 
 # the second one is list comprehension
 counts1 = [[0 for _ in range(7)] for _ in range(3)]
 counts2 = [[0] * 7 ] * 3 
+
+
+# use the variable args in a function
+def sample_func(**filters):
+    status = filters['status']
+    period = filters['period']
+
+# from graphene.types.generic import GenericScalar
+# from django.core import serializers
+# options = GenericScalar
+# xxx.objects.order_by(*order)
+# xxx.objects.filter(**filters)
+# serializers.serialize('json', querySet, fields=('name', ))
