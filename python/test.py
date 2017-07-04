@@ -51,3 +51,7 @@ def sample_func(**filters):
 # xxx.objects.order_by(*order)
 # xxx.objects.filter(**filters)
 # serializers.serialize('json', querySet, fields=('name', ))
+
+# time difference in python:
+def time_difference_in_days(past, future):
+   return float(format((future - past).total_seconds() / (60 * 60 * 24), '.2f')) 
