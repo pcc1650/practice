@@ -23,3 +23,12 @@ class MyComponent extends Component {
 }
 
 export default MyComponent
+
+// inheritance inversion
+const MyContainer = (WrappedComponent) => {
+    class extends WrappedComponent {
+        render(){
+            return super.render()
+        }
+    }
+}
