@@ -55,3 +55,11 @@ def sample_func(**filters):
 # time difference in python:
 def time_difference_in_days(past, future):
    return float(format((future - past).total_seconds() / (60 * 60 * 24), '.2f')) 
+
+
+import os
+DIRNAME = os.path.dirname(__file__)
+credentials = ServiceAccountCredentials.from_json_keyfile_name(
+    os.path.join(DIRNAME, 'key.json'),
+    scope
+)
