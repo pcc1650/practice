@@ -63,3 +63,6 @@ credentials = ServiceAccountCredentials.from_json_keyfile_name(
     os.path.join(DIRNAME, 'key.json'),
     scope
 )
+
+
+# For a ManyToManyField or a reverse ForeignKey there are two different sorts of filter. One is every filter in a single filter(), which means applied simultaneously. The other one is chain filter, the chain filter in this scenario is irrelavant to each other. The second filter does not necessarily select objects from results of an earlier filter() call.
